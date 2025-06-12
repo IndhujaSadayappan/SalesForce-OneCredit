@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Review Summary" icon-name="standard:contact">
+        <template if:true={reviews.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={reviews.data}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template if:true={reviews.error}>
+            <div class="slds-text-color_error">
+                {reviews.error}
+            </div>
+        </template>
+    </lightning-card>
+</template>
